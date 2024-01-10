@@ -1,0 +1,47 @@
+public class Behaelter {
+    private int farbe;
+    private double preis;
+    private String form;
+
+    public void preisErhöhung (double erhöhung) {
+        this.preis = preis + erhöhung;
+    }
+
+    public Behaelter (String form) {
+        this.form = form;
+    }
+
+    public Behaelter (int farbe, String form) {
+        this.farbe = farbe;
+        this.form = form;
+    }
+
+    public Behaelter (int farbe) {
+        this.farbe = farbe;
+        this.form = "3 Liter Eimer";
+    }
+
+    public int getFarbe() {
+        return farbe;
+    }
+
+    public void setFarbe(int farbe) {
+        this.farbe = farbe;
+    }
+
+    public double getPreis() {
+        return preis;
+    }
+
+    public void setPreis(double preis) {
+        this.preis = preis;
+    }
+
+    public String getForm() {
+        return form;
+    }
+
+    public void setForm(String form) {
+        this.form = form;
+    }
+}
