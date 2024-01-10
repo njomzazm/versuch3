@@ -1,0 +1,29 @@
+import javax.swing.*;
+
+public class BehaelterApplikation {
+    public static void main (String [] args) {
+        Behaelter [] behälterkiste = new Behaelter[3];
+
+
+
+        String eingabeForm = JOptionPane.showInputDialog("Geben Sie Form ein.");
+        for (int i = 0; i < 3; i++) {
+
+
+            String eingabeFarbe = JOptionPane.showInputDialog("Geben Sie Farbe ein.");
+            String eingabePreis = JOptionPane.showInputDialog("Geben Sie Preis ein.");
+
+            behälterkiste[i] = new Behaelter(eingabeForm);
+
+            behälterkiste[i].setFarbe(Integer.parseInt(eingabeFarbe));
+            behälterkiste[i].setPreis(Double.parseDouble(eingabePreis));
+
+            behälterkiste[i].preisErhöhung(0.06);
+
+            System.out.println("Behälter " + i + " =" + " Form: " + behälterkiste[i].getForm() + ", Farbe: " + behälterkiste[i].getFarbe() + ", Preis: " + behälterkiste[i].getPreis());
+
+        }
+        double gesamtpreis = behälterkiste[0].getPreis() + behälterkiste[1].getPreis() + behälterkiste[2].getPreis();
+        System.out.println("Gesamtpreis: " + gesamtpreis);
+    }
+}
